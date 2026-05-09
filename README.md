@@ -57,8 +57,11 @@ echo '/usr/sbin/podkop-update.sh' >> /etc/sysupgrade.conf
 Первый запуск (если списков ещё нет): `UPDATED ...` × 12 + `podkop reloaded`.
 Повторный: `all lists up to date`.
 
-**4. В UI podkop**
-Local Domain Lists:
+**4. Подключить списки в podkop через UI:**
+
+В поле **Local Domain Lists** добавить:
+
+```
 /etc/podkop/lists/domains/russia_inside.lst
 /etc/podkop/lists/domains/discord.lst
 /etc/podkop/lists/domains/twitter.lst
@@ -66,16 +69,19 @@ Local Domain Lists:
 /etc/podkop/lists/domains/google_ai.lst
 /etc/podkop/lists/domains/roblox.lst
 /etc/podkop/lists/domains/telegram.lst
+```
 
-Local Subnet Lists:
+В поле **Local Subnet Lists** добавить:
+
+```
 /etc/podkop/lists/subnets/discord.lst
 /etc/podkop/lists/subnets/twitter.lst
 /etc/podkop/lists/subnets/meta.lst
 /etc/podkop/lists/subnets/roblox.lst
 /etc/podkop/lists/subnets/telegram.lst
+```
 
-И со всех Community Lists убери галки крестиками.
-
+В разделе **Community Lists** снять **все** галочки ❌ — встроенные подборки полностью покрываются локальными списками; если оставить — получится дублирование правил.
 
 **5. Cron** — например, раз в сутки в 04:17:
 
