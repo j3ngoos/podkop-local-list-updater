@@ -38,7 +38,7 @@ opkg install wget-ssl
 **1. Положить скрипт:**
 
 ```sh
-wget -O /usr/sbin/podkop-update.sh https://raw.githubusercontent.com/j3ngoos/podkop-update/main/podkop-update.sh
+wget -O /usr/sbin/podkop-update.sh https://raw.githubusercontent.com/j3ngoos/podkop-local-list-updater/main/podkop-update.sh
 chmod 755 /usr/sbin/podkop-update.sh
 ```
 
