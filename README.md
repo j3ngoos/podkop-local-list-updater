@@ -57,7 +57,27 @@ echo '/usr/sbin/podkop-update.sh' >> /etc/sysupgrade.conf
 Первый запуск (если списков ещё нет): `UPDATED ...` × 12 + `podkop reloaded`.
 Повторный: `all lists up to date`.
 
-**4. Cron** — например, раз в сутки в 04:17:
+**4. В UI podkop**
+Local Domain Lists:
+/etc/podkop/lists/domains/russia_inside.lst
+/etc/podkop/lists/domains/discord.lst
+/etc/podkop/lists/domains/twitter.lst
+/etc/podkop/lists/domains/meta.lst
+/etc/podkop/lists/domains/google_ai.lst
+/etc/podkop/lists/domains/roblox.lst
+/etc/podkop/lists/domains/telegram.lst
+
+Local Subnet Lists:
+/etc/podkop/lists/subnets/discord.lst
+/etc/podkop/lists/subnets/twitter.lst
+/etc/podkop/lists/subnets/meta.lst
+/etc/podkop/lists/subnets/roblox.lst
+/etc/podkop/lists/subnets/telegram.lst
+
+И со всех Community Lists убери галки крестиками.
+
+
+**5. Cron** — например, раз в сутки в 04:17:
 
 ```sh
 echo '17 4 * * * /usr/sbin/podkop-update.sh' >> /etc/crontabs/root
